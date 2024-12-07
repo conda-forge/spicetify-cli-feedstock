@@ -1,4 +1,4 @@
-{% set version = "2.36.12" %}
+{% set version = "2.38.5" %}
 
 package:
   name: spicetify-cli
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/spicetify/spicetify-cli/archive/v{{ version }}.tar.gz
-  sha256: dfaa968ade8359124cc8f59bd39b00be68a551fedbe95e1d7f79543c5141cc25
+  sha256: bb72f491552d0f8fbe0ab3195c70884e8c4eb9c588f17ec77dcb4494aec70e52
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
