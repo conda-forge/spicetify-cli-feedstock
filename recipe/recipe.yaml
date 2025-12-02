@@ -1,0 +1,38 @@
+schema_version: 1
+
+context:
+  version: 2.42.3
+
+package:
+  name: spicetify-cli
+  version: ${{ version }}
+
+source:
+  url: https://github.com/spicetify/spicetify-cli/archive/v${{ version }}.tar.gz
+  sha256: 2d1108bff0b3b6232e34b417fc7ff00fa661a04afd23f4ed877f2514696ab197
+
+build:
+  number: 1
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler('go-nocgo') }}
+    - go-licenses
+
+tests:
+  - script:
+      - spicetify-cli --help
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE
+    - license-files/
+  summary: Command-line tool to customize Spotify client
+  homepage: https://github.com/spicetify-cli/spicetify-cli
+  repository: https://github.com/spicetify-cli/spicetify-cli
+
+extra:
+  recipe-maintainers:
+    - danielnachun
