@@ -2,7 +2,7 @@
 
 set -o xtrace -o nounset -o pipefail -o errexit
 
-go build -buildmode=pie -trimpath -o=${PREFIX}/libexec/spicetify-cli/bin/spicetify-cli -ldflags="-s -w"
+go build -o=${PREFIX}/libexec/spicetify-cli/bin/spicetify-cli -ldflags="-s -w"
 cp css-map.json ${PREFIX}/libexec/spicetify-cli
 cp -R CustomApps ${PREFIX}/libexec/spicetify-cli
 cp -R Extensions ${PREFIX}/libexec/spicetify-cli
