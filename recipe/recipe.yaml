@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.42.14"
+  version: "2.43.0"
 
 package:
   name: spicetify-cli
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/spicetify/spicetify-cli/archive/v${{ version }}.tar.gz
-  sha256: d03c5fc93db5a6ddae2410339995287bd05b3edb9d2bde8998568f18dd2e42ed
+  sha256: f7790f24afbbd91cbc3b871bb019da14ef9558dab52339811158d4ca4ffb39bc
 
 build:
   number: 0
